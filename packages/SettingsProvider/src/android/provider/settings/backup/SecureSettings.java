@@ -286,5 +286,8 @@ public class SecureSettings {
         Settings.Secure.TETHERING_ALLOW_VPN_UPSTREAMS,
         Settings.Secure.MANDATORY_BIOMETRICS,
         Settings.Secure.MANDATORY_BIOMETRICS_REQUIREMENTS_SATISFIED,
+        Settings.Secure.MEDIA_CONTROLS_ALWAYS_SHOW_TIME,
+        Settings.Secure.MEDIA_CONTROLS_TIME_AS_NEXT,
+        Settings.Secure.MEDIA_CONTROLS_ACTIONS,
     };
 }
