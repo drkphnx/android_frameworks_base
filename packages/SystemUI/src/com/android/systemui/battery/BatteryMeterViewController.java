@@ -73,7 +73,7 @@ public class BatteryMeterViewController extends ViewController<BatteryMeterView>
                     int batteryStyle = TunerService.parseInteger(newValue,
                             BatteryMeterView.BATTERY_STYLE_PORTRAIT);
                     mView.setBatteryStyle(batteryStyle);
-                    mView.setVisibility(!mBatteryController.isPresent() || 
+                    mView.setVisibility(!mBatteryController.isPresent() ||
                         batteryStyle == BatteryMeterView.BATTERY_STYLE_HIDDEN ? View.GONE : View.VISIBLE);
                     break;
                 case STATUS_BAR_SHOW_BATTERY_PERCENT:
@@ -113,14 +113,6 @@ public class BatteryMeterViewController extends ViewController<BatteryMeterView>
                 public void onIsOverheatedChanged(boolean isOverheated) {
                     mView.onIsOverheatedChanged(isOverheated);
                 }
-
-                @Override
-                public void onBatteryPresentChanged(boolean batteryPresent) {
-                    mView.setBatteryPresence(batteryPresent);
-                    mView.setVisibility(!batteryPresent ||
-                        mView.getBatteryStyle() == BatteryMeterView.BATTERY_STYLE_HIDDEN ?
-                        View.GONE : View.VISIBLE);
-                }
             };
 
     // Some places may need to show the battery conditionally, and not obey the tuner
@@ -145,11 +137,7 @@ public class BatteryMeterViewController extends ViewController<BatteryMeterView>
         mBatteryController = batteryController;
 
         mView.setBatteryEstimateFetcher(mBatteryController::getEstimatedTimeRemainingString);
-        mView.setBatteryPresence(mBatteryController.isPresent());
         mView.setDisplayShieldEnabled(featureFlags.isEnabled(Flags.BATTERY_SHIELD_ICON));
-        if (!mBatteryController.isPresent()) {
-            mView.setVisibility(View.GONE);
-        }
 
         mSettingObserver = new SettingObserver(mMainHandler);
     }
