@@ -21,7 +21,7 @@
     <string name="status_bar_call_strength">Cường độ cuộc gọi</string>
     <!-- QuickSettings: InternetDialog: Summary for how many devices are connected to the hotspot [CHAR LIMIT=NONE] -->
     <plurals name="quick_settings_internet_hotspot_summary_num_devices">
-        <item quantity="other">%d thiết bị kết nối</item>
+        <item quantity="other">%d thiết bị được kết nối</item>
     </plurals>
     <!-- Text to use when the number in a notification info is too large -->
     <!-- Name of the roaming status bar icon. -->
@@ -31,12 +31,12 @@
     <!-- Name of the VoWiFi status bar icon. -->
     <string name="status_bar_vowifi">Cuộc gọi Wi-Fi (VoWiFi)</string>
     <!-- Status bar network traffic monitor strings -->
-    <string name="kilobitspersecond_short">kb/s</string>
-    <string name="megabitspersecond_short">Mb/s</string>
-    <string name="gigabitspersecond_short">Gb/s</string>
-    <string name="kilobytespersecond_short">kB/s</string>
-    <string name="megabytespersecond_short">MB/s</string>
-    <string name="gigabytespersecond_short">GB/s</string>
+    <string name="kilobitspersecond_short">kb/ giây</string>
+    <string name="megabitspersecond_short">Mb/ giây</string>
+    <string name="gigabitspersecond_short">Gb/ giây</string>
+    <string name="kilobytespersecond_short">kB/ giây</string>
+    <string name="megabytespersecond_short">MB/ giây</string>
+    <string name="gigabytespersecond_short">GB/ giây</string>
     <!-- Data usage info in QS footer -->
     <string name="usage_data">hôm nay dùng</string>
     <string name="usage_data_default_suffix">Dữ liệu</string>
