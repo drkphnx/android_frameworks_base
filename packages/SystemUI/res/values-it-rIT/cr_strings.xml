@@ -52,7 +52,7 @@
     <string name="weather_condition_mist">Nebbioso</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
     <string name="keyguard_indication_dash_charging_time">&lt;xliff:g id="percentage"&gt;%2$s&lt;/xliff:g&gt; • Ricarica Ultrarapida (&lt;xliff:g id="charging_time_left" example="4 hours and 2 minutes"&gt;%1$s&lt;/xliff:g alla carica completa)</string>
-    <string name="keyguard_plugged_in_dash_charging"><xliff:g id="percentage">%s</xliff:g> • Animazione di carica</string>
+    <string name="keyguard_plugged_in_dash_charging"><xliff:g id="percentage">%s</xliff:g> • Ricarica rapida</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a warp charger. Should match keyguard_plugged_in_warp_charging [CHAR LIMIT=40]-->
     <string name="keyguard_indication_warp_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Ricarica Rapida(<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g> alla carica completa)</string>
     <string name="keyguard_plugged_in_warp_charging"><xliff:g id="percentage">%s</xliff:g> • Carica Rapida</string>
@@ -96,7 +96,7 @@
     <string name="force_stop_dlg_title">Forzare la chiusura?</string>
     <string name="force_stop_dlg_text">Se forzi la chiusura di un\'applicazione, potrebbe comportarsi in modo anomalo.</string>
     <!-- Label for UI element which allows to use lens on screenshot [CHAR LIMIT=30] -->
-    <string name="screenshot_lens_label">Lenti</string>
+    <string name="screenshot_lens_label">Lens</string>
     <!-- Island notification -->
     <string name="now_playing_on">In riproduzione su %1$s</string>
     <string name="by_artist">%1$s di %2$s</string>
@@ -128,8 +128,8 @@
     <!-- Volume panel QS tile -->
     <string name="quick_settings_volume_panel_label">Pannello del volume</string>
     <!-- Smart Pixels QS Tile -->
-    <string name="quick_settings_smart_pixels">Smart Pixel</string>
-    <string name="quick_settings_smart_pixels_on_power_save">Abilita automaticamente Smart Pixel</string>
+    <string name="quick_settings_smart_pixels">Smart Pixels</string>
+    <string name="quick_settings_smart_pixels_on_power_save">Abilita automaticamente Smart Pixels</string>
     <!-- Weather Tile -->
     <string name="omnijaws_service_error">Errore durante il caricamento dei dati meteo</string>
     <string name="omnijaws_service_unknown">Dati meteo non disponibili</string>
