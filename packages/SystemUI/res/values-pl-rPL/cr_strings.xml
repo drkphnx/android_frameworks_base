@@ -150,5 +150,5 @@
     <string name="face_unlock_recognizing">Rozpoznawanie twarzy...</string>
     <!-- SoundSearch Tile -->
     <string name="quick_settings_sound_search">Wyszukiwanie głosowe</string>
-    <string name="quick_settings_sound_search_no_app">Zainstaluj najpierw aplikację do wyszukiwania dźwięku</string>
+    <string name="quick_settings_sound_search_no_app">Zainstaluj najpierw aplikację do wyszukiwania głosowego</string>
 </resources>
