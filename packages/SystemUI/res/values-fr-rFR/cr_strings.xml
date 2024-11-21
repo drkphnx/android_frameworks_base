@@ -146,4 +146,7 @@
     <string name="accessibility_assistant_button">Assistant IA</string>
     <!-- Text while recognizing face -->
     <string name="face_unlock_recognizing">Reconnaissance faciale...</string>
+    <!-- SoundSearch Tile -->
+    <string name="quick_settings_sound_search">Recherche audio</string>
+    <string name="quick_settings_sound_search_no_app">Installez d\'abord une application de recherche sonore</string>
 </resources>
