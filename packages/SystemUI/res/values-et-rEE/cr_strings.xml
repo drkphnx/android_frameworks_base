@@ -146,4 +146,7 @@
     <string name="accessibility_assistant_button">AI Assistant</string>
     <!-- Text while recognizing face -->
     <string name="face_unlock_recognizing">Näotuvastus...</string>
+    <!-- SoundSearch Tile -->
+    <string name="quick_settings_sound_search">Heli otsing</string>
+    <string name="quick_settings_sound_search_no_app">Paigalda kõigepealt heliotsingu rakendus</string>
 </resources>
