@@ -145,4 +145,7 @@
     <string name="accessibility_assistant_button">AI 어시스턴트</string>
     <!-- Text while recognizing face -->
     <string name="face_unlock_recognizing">얼굴 인식 중\u2026</string>
+    <!-- SoundSearch Tile -->
+    <string name="quick_settings_sound_search">사운드 검색</string>
+    <string name="quick_settings_sound_search_no_app">싸운드써치앱먼저까라</string>
 </resources>
