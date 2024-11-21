@@ -145,4 +145,7 @@
     <string name="accessibility_assistant_button">AI 助手</string>
     <!-- Text while recognizing face -->
     <string name="face_unlock_recognizing">正在识别面部...</string>
+    <!-- SoundSearch Tile -->
+    <string name="quick_settings_sound_search">声音搜索</string>
+    <string name="quick_settings_sound_search_no_app">请先安装语音搜索应用</string>
 </resources>
