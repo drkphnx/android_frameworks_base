@@ -148,5 +148,5 @@
     <string name="face_unlock_recognizing">Arcfelismerés...</string>
     <!-- SoundSearch Tile -->
     <string name="quick_settings_sound_search">Hangalapú keresés</string>
-    <string name="quick_settings_sound_search_no_app">Előbb telepítsen egy hangalapú-kereső alkalmazást</string>
+    <string name="quick_settings_sound_search_no_app">Előbb telepítsen egy hangalapú keresőalkalmazást</string>
 </resources>
