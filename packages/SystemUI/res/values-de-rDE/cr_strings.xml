@@ -146,4 +146,7 @@
     <string name="accessibility_assistant_button">KI-Assistent</string>
     <!-- Text while recognizing face -->
     <string name="face_unlock_recognizing">Gesichtserkennung …</string>
+    <!-- SoundSearch Tile -->
+    <string name="quick_settings_sound_search">Sound Search</string>
+    <string name="quick_settings_sound_search_no_app">Bitte zunächst eine Musikerkennungs-App installieren</string>
 </resources>
