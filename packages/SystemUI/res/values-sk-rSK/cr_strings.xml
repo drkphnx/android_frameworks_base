@@ -148,4 +148,7 @@
     <string name="accessibility_assistant_button">AI asistent</string>
     <!-- Text while recognizing face -->
     <string name="face_unlock_recognizing">Prebieha rozpoznávanie...</string>
+    <!-- SoundSearch Tile -->
+    <string name="quick_settings_sound_search">Zvukové vyhľadávanie</string>
+    <string name="quick_settings_sound_search_no_app">Najskôr nainštalujte aplikáciu na vyhľadávanie zvuku</string>
 </resources>
