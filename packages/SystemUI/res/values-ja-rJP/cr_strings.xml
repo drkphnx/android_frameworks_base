@@ -145,4 +145,7 @@
     <string name="accessibility_assistant_button">AI アシスタント</string>
     <!-- Text while recognizing face -->
     <string name="face_unlock_recognizing">顔を認識中...</string>
+    <!-- SoundSearch Tile -->
+    <string name="quick_settings_sound_search">音声検索</string>
+    <string name="quick_settings_sound_search_no_app">まず音声検索アプリをインストールしてください</string>
 </resources>
