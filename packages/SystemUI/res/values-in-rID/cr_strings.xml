@@ -147,5 +147,5 @@
     <string name="face_unlock_recognizing">Mengenali wajah...</string>
     <!-- SoundSearch Tile -->
     <string name="quick_settings_sound_search">Pencarian suara</string>
-    <string name="quick_settings_sound_search_no_app">Instal aplikasi pencarian suara terlebih dahulu</string>
+    <string name="quick_settings_sound_search_no_app">Pasang aplikasi pencarian suara terlebih dahulu</string>
 </resources>
