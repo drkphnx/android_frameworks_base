@@ -148,7 +148,6 @@
     <string name="accessibility_assistant_button">Памочнік ШІ</string>
     <!-- Text while recognizing face -->
     <string name="face_unlock_recognizing">Распазнаванне асобы...</string>
-    <!-- SoundSearch Tile -->
-    <string name="quick_settings_sound_search">Пошук музыкі</string>
-    <string name="quick_settings_sound_search_no_app">Спачатку ўсталюйце праграму для пошуку музыкі</string>
+    <!-- 5G toggle in Internet Dialog -->
+    <string name="enable_fiveg">Enable 5G</string>
 </resources>
