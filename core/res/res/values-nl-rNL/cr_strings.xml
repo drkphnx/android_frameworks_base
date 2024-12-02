@@ -28,5 +28,5 @@
     <!-- App lock -->
     <string name="unlock_application">Ontgrendel <xliff:g id="label" example="Telegram">%1$s</xliff:g></string>
     <!-- Lock gesture -->
-    <string name="gesture_locked_warning">Swipe again to unlock gestures</string>
+    <string name="gesture_locked_warning">Veeg opnieuw om gebaren te ontgrendelen</string>
 </resources>
