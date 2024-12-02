@@ -28,5 +28,5 @@
     <!-- App lock -->
     <string name="unlock_application">Sblocca <xliff:g id="label" example="Telegram">%1$s</xliff:g></string>
     <!-- Lock gesture -->
-    <string name="gesture_locked_warning">Swipe again to unlock gestures</string>
+    <string name="gesture_locked_warning">Scorri di nuovo per sbloccare i gesti</string>
 </resources>
