@@ -27,4 +27,6 @@
     <string name="pocket_mode_instruction_step2">2. Pressione e segure o botão liga/desliga para sair do modo de bolso.</string>
     <!-- App lock -->
     <string name="unlock_application">Desbloquear <xliff:g id="label" example="Telegram">%1$s</xliff:g></string>
+    <!-- Lock gesture -->
+    <string name="gesture_locked_warning">Swipe again to unlock gestures</string>
 </resources>
