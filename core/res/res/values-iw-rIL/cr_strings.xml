@@ -28,5 +28,5 @@
     <!-- App lock -->
     <string name="unlock_application">פתיחת הנעילה של <xliff:g id="label" example="Telegram">%1$s</xliff:g></string>
     <!-- Lock gesture -->
-    <string name="gesture_locked_warning">Swipe again to unlock gestures</string>
+    <string name="gesture_locked_warning">החליקו בשנית כדי להתיר מחוות</string>
 </resources>
