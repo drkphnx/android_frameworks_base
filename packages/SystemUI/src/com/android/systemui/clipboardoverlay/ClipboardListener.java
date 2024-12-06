@@ -73,6 +73,7 @@ public class ClipboardListener implements
             ClipboardManager clipboardManager,
             KeyguardManager keyguardManager,
             FeatureFlags featureFlags,
+            KeyguardManager keyguardManager,
             UiEventLogger uiEventLogger) {
         mContext = context;
         mOverlayProvider = clipboardOverlayControllerProvider;
@@ -80,6 +81,7 @@ public class ClipboardListener implements
         mClipboardManager = clipboardManager;
         mKeyguardManager = keyguardManager;
         mFeatureFlags = featureFlags;
+        mKeyguardManager = keyguardManager;
         mUiEventLogger = uiEventLogger;
     }
 
