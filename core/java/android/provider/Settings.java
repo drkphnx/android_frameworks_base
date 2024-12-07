@@ -13289,6 +13289,13 @@ public final class Settings {
                 "com.android.server.display.HBM_SETTING_KEY";
 
         /**
+         * Control which apps to hide from other user apps.
+         * @hide
+         */
+        @Readable
+        public static final String HIDE_APPLIST = "hide_applist";
+
+        /**
          * Whether to show privacy indicator for location
          * @hide
          */
