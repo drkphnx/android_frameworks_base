@@ -27,4 +27,6 @@
     <string name="pocket_mode_instruction_step2">2. 按住电源按钮可退出口袋检测。</string>
     <!-- App lock -->
     <string name="unlock_application">解锁应用 <xliff:g id="label" example="Telegram">%1$s</xliff:g></string>
+    <!-- Lock gesture -->
+    <string name="gesture_locked_warning">Swipe again to unlock gestures</string>
 </resources>
