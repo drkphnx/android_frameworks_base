@@ -28,5 +28,5 @@
     <!-- App lock -->
     <string name="unlock_application">بازگشایی <xliff:g id="label" example="Telegram">%1$s</xliff:g></string>
     <!-- Lock gesture -->
-    <string name="gesture_locked_warning">Swipe again to unlock gestures</string>
+    <string name="gesture_locked_warning">برای باز کردن قفل حرکات، دوباره انگشت خود را بکشید</string>
 </resources>
