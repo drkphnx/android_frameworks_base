@@ -99,9 +99,6 @@
     <string name="force_stop_dlg_text">Vynucené ukončení může způsobit nepředvídatelné chování aplikace.</string>
     <!-- Label for UI element which allows to use lens on screenshot [CHAR LIMIT=30] -->
     <string name="screenshot_lens_label">Lens</string>
-    <!-- Island notification -->
-    <string name="now_playing_on">Nyní hraje na %1$s</string>
-    <string name="by_artist">%1$s od %2$s</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">Zvuk</string>
     <string name="quick_settings_sound_ring">Vyzvánění</string>
