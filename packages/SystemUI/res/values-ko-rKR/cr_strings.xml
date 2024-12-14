@@ -96,9 +96,6 @@
     <string name="force_stop_dlg_text">앱을 강제로 종료하면 문제가 발생할 수 있습니다.</string>
     <!-- Label for UI element which allows to use lens on screenshot [CHAR LIMIT=30] -->
     <string name="screenshot_lens_label">렌즈</string>
-    <!-- Island notification -->
-    <string name="now_playing_on">%1$s에서 지금 재생 중</string>
-    <string name="by_artist">%2$s - %1$s</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">소리 모드</string>
     <string name="quick_settings_sound_ring">소리</string>
