@@ -99,9 +99,6 @@
     <string name="force_stop_dlg_text">Принудительное закрытие приложения может негативно отразиться на его функциональности</string>
     <!-- Label for UI element which allows to use lens on screenshot [CHAR LIMIT=30] -->
     <string name="screenshot_lens_label">Объектив</string>
-    <!-- Island notification -->
-    <string name="now_playing_on">Играет на %1$s</string>
-    <string name="by_artist">%1$s от %2$s</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">Звук</string>
     <string name="quick_settings_sound_ring">Звонок</string>
