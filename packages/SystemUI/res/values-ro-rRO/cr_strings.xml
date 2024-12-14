@@ -98,9 +98,6 @@
     <string name="force_stop_dlg_text">Dacă forțați oprirea unei aplicații, aceasta se poate comporta necorespunzător.</string>
     <!-- Label for UI element which allows to use lens on screenshot [CHAR LIMIT=30] -->
     <string name="screenshot_lens_label">Obiectiv</string>
-    <!-- Island notification -->
-    <string name="now_playing_on">Acum se redă pe %1$s</string>
-    <string name="by_artist">%1$s de către %2$s</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">Sunet</string>
     <string name="quick_settings_sound_ring">Sonerie</string>
