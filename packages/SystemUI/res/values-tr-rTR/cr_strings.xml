@@ -97,9 +97,6 @@
     <string name="force_stop_dlg_text">Uygulamayı zorla durdurursanız, hatalı davranabilir.</string>
     <!-- Label for UI element which allows to use lens on screenshot [CHAR LIMIT=30] -->
     <string name="screenshot_lens_label">Lens</string>
-    <!-- Island notification -->
-    <string name="now_playing_on">Şu anda %1$s üzerinde oynatılıyor</string>
-    <string name="by_artist">%2$s - %1$s</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">Ses</string>
     <string name="quick_settings_sound_ring">Zil sesi</string>
