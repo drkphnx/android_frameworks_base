@@ -97,9 +97,6 @@
     <string name="force_stop_dlg_text">Se forçar a paragem de uma aplicação, esta poderá ter um comportamento anormal.</string>
     <!-- Label for UI element which allows to use lens on screenshot [CHAR LIMIT=30] -->
     <string name="screenshot_lens_label">Lens</string>
-    <!-- Island notification -->
-    <string name="now_playing_on">A reproduzir agora em %1$s</string>
-    <string name="by_artist">%1$s por %2$s</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">Som</string>
     <string name="quick_settings_sound_ring">Toque</string>
