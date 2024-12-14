@@ -99,9 +99,6 @@
     <string name="force_stop_dlg_text">Примусове закриття додатку може призвести до збою в його роботі.</string>
     <!-- Label for UI element which allows to use lens on screenshot [CHAR LIMIT=30] -->
     <string name="screenshot_lens_label">Об\'єктив</string>
-    <!-- Island notification -->
-    <string name="now_playing_on">Зараз відтворюється на %1$s</string>
-    <string name="by_artist">%1$s Від %2$s</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">Мелодії</string>
     <string name="quick_settings_sound_ring">Кільце</string>
