@@ -97,9 +97,6 @@
     <string name="force_stop_dlg_text">Ha egy alkalmazást leállásra kényszerít, lehetséges, hogy az hibásan fog működni.</string>
     <!-- Label for UI element which allows to use lens on screenshot [CHAR LIMIT=30] -->
     <string name="screenshot_lens_label">Google Lens</string>
-    <!-- Island notification -->
-    <string name="now_playing_on">Most %1$s hallható</string>
-    <string name="by_artist">%1$s – %2$s</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">Hang</string>
     <string name="quick_settings_sound_ring">Csengés</string>
