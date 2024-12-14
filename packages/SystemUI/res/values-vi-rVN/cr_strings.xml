@@ -96,9 +96,6 @@
     <string name="force_stop_dlg_text">Nếu buộc dừng thì ứng dụng có thể hoạt động sai.</string>
     <!-- Label for UI element which allows to use lens on screenshot [CHAR LIMIT=30] -->
     <string name="screenshot_lens_label">Ống kính</string>
-    <!-- Island notification -->
-    <string name="now_playing_on">Phát trên...%1$s</string>
-    <string name="by_artist">%1$s bởi %2$s</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">Âm thanh</string>
     <string name="quick_settings_sound_ring">Chuông</string>
