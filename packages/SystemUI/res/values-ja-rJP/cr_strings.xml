@@ -96,9 +96,6 @@
     <string name="force_stop_dlg_text">アプリを強制停止すると、正常に機能しないことがあります。</string>
     <!-- Label for UI element which allows to use lens on screenshot [CHAR LIMIT=30] -->
     <string name="screenshot_lens_label">レンズ</string>
-    <!-- Island notification -->
-    <string name="now_playing_on">%1$s で再生中</string>
-    <string name="by_artist">%1$s / %2$s</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">サウンド</string>
     <string name="quick_settings_sound_ring">着信音</string>
