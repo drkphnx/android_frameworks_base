@@ -96,9 +96,6 @@
     <string name="force_stop_dlg_text">强行停止某个应用可能会导致其出现异常。</string>
     <!-- Label for UI element which allows to use lens on screenshot [CHAR LIMIT=30] -->
     <string name="screenshot_lens_label">智能镜头</string>
-    <!-- Island notification -->
-    <string name="now_playing_on">正在 %1$s 上播放</string>
-    <string name="by_artist">%2$s 的 %1$s</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">声音</string>
     <string name="quick_settings_sound_ring">响铃</string>
