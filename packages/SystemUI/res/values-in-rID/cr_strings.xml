@@ -96,9 +96,6 @@
     <string name="force_stop_dlg_text">Jika Anda menghentikan paksa aplikasi, kemungkinan akan terjadi gagal fungsi.</string>
     <!-- Label for UI element which allows to use lens on screenshot [CHAR LIMIT=30] -->
     <string name="screenshot_lens_label">Lens</string>
-    <!-- Island notification -->
-    <string name="now_playing_on">Sedang Diputar di %1$s</string>
-    <string name="by_artist">%1$s oleh %2$s</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">Suara</string>
     <string name="quick_settings_sound_ring">Dering</string>
