@@ -25,7 +25,6 @@ import android.content.ComponentName;
 import android.content.res.Configuration;
 import android.content.res.Configuration.Orientation;
 import android.metrics.LogMaker;
-import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 
@@ -44,7 +43,6 @@ import com.android.systemui.qs.logging.QSLogger;
 import com.android.systemui.qs.tileimpl.QSTileViewImpl;
 import com.android.systemui.scene.shared.flag.SceneContainerFlag;
 import com.android.systemui.statusbar.policy.SplitShadeStateController;
-import com.android.systemui.tuner.TunerService;
 import com.android.systemui.util.ViewController;
 import com.android.systemui.util.animation.DisappearParameters;
 import com.android.systemui.util.kotlin.JavaAdapterKt;
@@ -71,8 +69,7 @@ import javax.inject.Provider;
  * @param <T> Type of QSPanel.
  */
 public abstract class QSPanelControllerBase<T extends QSPanel> extends ViewController<T>
-        implements Dumpable, TunerService.Tunable {
-
+        implements Dumpable{
     private static final String TAG = "QSPanelControllerBase";
     protected final QSHost mHost;
     private final QSCustomizerController mQsCustomizerController;
@@ -82,7 +79,6 @@ public abstract class QSPanelControllerBase<T extends QSPanel> extends ViewContr
     private final UiEventLogger mUiEventLogger;
     protected final QSLogger mQSLogger;
     private final DumpManager mDumpManager;
-    private final TunerService mTunerService;
     protected final ArrayList<TileRecord> mRecords = new ArrayList<>();
     protected boolean mShouldUseSplitNotificationShade;
 
@@ -105,8 +101,6 @@ public abstract class QSPanelControllerBase<T extends QSPanel> extends ViewContr
     private boolean mDestroyed = false;
 
     private boolean mMediaVisibleFromInteractor;
-
-    private boolean mForceUpdate;
 
     private final Consumer<Boolean> mMediaOrRecommendationVisibleConsumer = mediaVisible -> {
         mMediaVisibleFromInteractor = mediaVisible;
@@ -175,8 +169,7 @@ public abstract class QSPanelControllerBase<T extends QSPanel> extends ViewContr
             QSLogger qsLogger,
             DumpManager dumpManager,
             SplitShadeStateController splitShadeStateController,
-            Provider<QSLongPressEffect> longPressEffectProvider,
-            TunerService tunerService
+            Provider<QSLongPressEffect> longPressEffectProvider
     ) {
         super(view);
         mHost = host;
@@ -191,7 +184,6 @@ public abstract class QSPanelControllerBase<T extends QSPanel> extends ViewContr
         mShouldUseSplitNotificationShade =
                 mSplitShadeStateController.shouldUseSplitNotificationShade(getResources());
         mLongPressEffectProvider = longPressEffectProvider;
-        mTunerService = tunerService;
     }
 
     @Override
@@ -240,9 +232,7 @@ public abstract class QSPanelControllerBase<T extends QSPanel> extends ViewContr
             mMediaHost.addVisibilityChangeListener(mMediaHostVisibilityListener);
         }
         mView.addOnConfigurationChangedListener(mOnConfigurationChangedListener);
-        if (mView.getTileLayout() != null) {
-           setTiles();
-        }
+        setTiles();
         mLastOrientation = getResources().getConfiguration().orientation;
         mLastScreenLayout = getResources().getConfiguration().screenLayout;
         mQSLogger.logOnViewAttached(mLastOrientation, mView.getDumpableTag());
@@ -250,15 +240,6 @@ public abstract class QSPanelControllerBase<T extends QSPanel> extends ViewContr
             setLayoutForMediaInScene();
         }
         switchTileLayout(true);
-
-        mTunerService.addTunable(this, QSPanel.QS_TILE_VERTICAL_LAYOUT);
-        mTunerService.addTunable(this, QSPanel.QS_TILE_LABEL_HIDE);
-        mTunerService.addTunable(this, QSPanel.QS_LAYOUT_COLUMNS);
-        mTunerService.addTunable(this, QSPanel.QS_LAYOUT_COLUMNS_LANDSCAPE);
-        mTunerService.addTunable(this, QSPanel.QS_LAYOUT_ROWS);
-        mTunerService.addTunable(this, QSPanel.QS_LAYOUT_ROWS_LANDSCAPE);
-        mTunerService.addTunable(this, QSPanel.QQS_LAYOUT_ROWS);
-        mTunerService.addTunable(this, QSPanel.QQS_LAYOUT_ROWS_LANDSCAPE);
 
         mDumpManager.registerDumpable(mView.getDumpableTag(), this);
     }
@@ -275,8 +256,6 @@ public abstract class QSPanelControllerBase<T extends QSPanel> extends ViewContr
 
     @Override
     protected void onViewDetached() {
-        mTunerService.removeTunable(this);
-
         mQSLogger.logOnViewDetached(mLastOrientation, mView.getDumpableTag());
         mView.removeOnConfigurationChangedListener(mOnConfigurationChangedListener);
 
@@ -304,7 +283,7 @@ public abstract class QSPanelControllerBase<T extends QSPanel> extends ViewContr
         if (!collapsedView && mQsTileRevealController != null) {
             mQsTileRevealController.updateRevealedTiles(tiles);
         }
-        boolean shouldChangeAll = mForceUpdate;
+        boolean shouldChangeAll = false;
         // If the new tiles are a prefix of the old tiles, we delete the extra tiles (from the old).
         // If not (even if they share a prefix) we remove all and add all the new ones.
         if (tiles.size() <= mRecords.size()) {
@@ -493,8 +472,7 @@ public abstract class QSPanelControllerBase<T extends QSPanel> extends ViewContr
 
     private void setLayoutForMediaInScene() {
         boolean withMedia = shouldUseHorizontalInScene();
-        mView.needsDynamicRowsAndColumns();
-        mView.placeTileLayoutForScene(withMedia);
+        mView.setColumnRowLayout(withMedia);
     }
 
     /**
@@ -620,31 +598,6 @@ public abstract class QSPanelControllerBase<T extends QSPanel> extends ViewContr
         // We have to prevent the media container position from moving during the transition to have
         // a smooth translation animation without stuttering.
         mView.setShouldMoveMediaOnExpansion(!isOnSplitShadeLockscreen);
-    }
-
-    @Override
-    public void onTuningChanged(String key, String newValue) {
-        switch (key) {
-            case QSPanel.QS_TILE_VERTICAL_LAYOUT:
-            case QSPanel.QS_TILE_LABEL_HIDE:
-            case QSPanel.QS_LAYOUT_COLUMNS:
-            case QSPanel.QS_LAYOUT_COLUMNS_LANDSCAPE:
-            case QSPanel.QS_LAYOUT_ROWS:
-            case QSPanel.QS_LAYOUT_ROWS_LANDSCAPE:
-            case QSPanel.QQS_LAYOUT_ROWS:
-            case QSPanel.QQS_LAYOUT_ROWS_LANDSCAPE:
-                if (mView.getTileLayout() != null) {
-                    mView.getTileLayout().updateSettings();
-                    mForceUpdate = true;
-                    getContext().getMainExecutor().execute(() -> {
-                        setTiles();
-                        mForceUpdate = false;
-                    });
-                }
-                break;
-            default:
-                break;
-        }
     }
 
     /** */
