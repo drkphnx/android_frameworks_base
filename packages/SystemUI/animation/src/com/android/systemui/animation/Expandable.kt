@@ -75,11 +75,6 @@ interface Expandable {
          */
         @JvmStatic
         fun fromView(view: View): Expandable {
-            var animatedView = view
-            if (animatedView is LaunchableView && animatedView.getAnimatedView() is View) {
-                animatedView = animatedView.getAnimatedView() as View
-            }
-
             return object : Expandable {
                 override fun activityTransitionController(
                     launchCujType: Int?,
@@ -88,7 +83,7 @@ interface Expandable {
                     returnCujType: Int?
                 ): ActivityTransitionAnimator.Controller? {
                     return ActivityTransitionAnimator.Controller.fromView(
-                        animatedView,
+                        view,
                         launchCujType,
                         cookie,
                         component,
@@ -99,7 +94,7 @@ interface Expandable {
                 override fun dialogTransitionController(
                     cuj: DialogCuj?
                 ): DialogTransitionAnimator.Controller? {
-                    return DialogTransitionAnimator.Controller.fromView(animatedView, cuj)
+                    return DialogTransitionAnimator.Controller.fromView(view, cuj)
                 }
             }
         }
