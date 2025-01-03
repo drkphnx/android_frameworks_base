@@ -26,7 +26,6 @@ import androidx.annotation.NonNull;
 
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.internal.widget.ViewClippingUtil;
-import com.android.systemui.crdroid.logo.LogoImage;
 import com.android.systemui.dagger.qualifiers.RootView;
 import com.android.systemui.flags.FeatureFlagsClassic;
 import com.android.systemui.plugins.DarkIconDispatcher;
@@ -94,8 +93,6 @@ public class HeadsUpAppearanceController extends ViewController<HeadsUpStatusBar
 
     private final Optional<View> mOperatorNameViewOptional;
 
-    private final LogoImage mLeftLogo;
-
     @VisibleForTesting
     float mExpandedHeight;
     @VisibleForTesting
@@ -155,7 +152,6 @@ public class HeadsUpAppearanceController extends ViewController<HeadsUpStatusBar
         mOperatorNameViewOptional = operatorNameViewOptional;
         mDarkIconDispatcher = darkIconDispatcher;
         mClockController = statusBarViewController.getClockController();
-        mLeftLogo = statusBarView.findViewById(R.id.statusbar_logo);
 
         mView.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
             @Override
@@ -262,11 +258,7 @@ public class HeadsUpAppearanceController extends ViewController<HeadsUpStatusBar
                     hide(clockView, View.INVISIBLE);
                 }
                 mOperatorNameViewOptional.ifPresent(view -> hide(view, View.INVISIBLE));
-                if (mLeftLogo.getVisibility() != View.GONE)
-                    mLeftLogo.setVisibility(View.INVISIBLE);
             } else {
-                if (mLeftLogo.getVisibility() != View.GONE)
-                    mLeftLogo.setVisibility(View.VISIBLE);
                 if (isClock) {
                     show(clockView);
                 }
