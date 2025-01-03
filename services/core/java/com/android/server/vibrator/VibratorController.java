@@ -23,7 +23,6 @@ import android.os.IVibratorStateListener;
 import android.os.Parcel;
 import android.os.RemoteCallbackList;
 import android.os.RemoteException;
-import android.os.RichTapVibrationEffect;
 import android.os.Trace;
 import android.os.VibrationEffect;
 import android.os.VibratorInfo;
@@ -60,8 +59,6 @@ final class VibratorController {
     private volatile boolean mIsUnderExternalControl;
     private volatile float mCurrentAmplitude;
 
-    private RichTapVibratorService mRichTapService;
-    
     /**
      * Listener for vibration completion callbacks from native.
      *
@@ -88,10 +85,6 @@ final class VibratorController {
         VibratorInfo.Builder vibratorInfoBuilder = new VibratorInfo.Builder(vibratorId);
         mVibratorInfoLoadSuccessful = mNativeWrapper.getInfo(vibratorInfoBuilder);
         mVibratorInfo = vibratorInfoBuilder.build();
-
-        if (RichTapVibrationEffect.isSupported()) {
-            mRichTapService = new RichTapVibratorService();
-        }
 
         if (!mVibratorInfoLoadSuccessful) {
             Slog.e(TAG,
@@ -264,10 +257,7 @@ final class VibratorController {
         Trace.traceBegin(Trace.TRACE_TAG_VIBRATOR, "VibratorController#setAmplitude");
         try {
             synchronized (mLock) {
-                if (mRichTapService != null) {
-                    int strength = (int) (255.0f * amplitude);
-                    mRichTapService.richTapVibratorSetAmplitude(strength);
-                } else if (mVibratorInfo.hasCapability(IVibrator.CAP_AMPLITUDE_CONTROL)) {
+                if (mVibratorInfo.hasCapability(IVibrator.CAP_AMPLITUDE_CONTROL)) {
                     mNativeWrapper.setAmplitude(amplitude);
                 }
                 if (mIsVibrating) {
@@ -292,13 +282,7 @@ final class VibratorController {
         Trace.traceBegin(Trace.TRACE_TAG_VIBRATOR, "VibratorController#on");
         try {
             synchronized (mLock) {
-                long duration = 0;
-                if (mRichTapService != null) {
-                    duration = milliseconds;
-                    mRichTapService.richTapVibratorOn(duration);
-                } else {
-                    duration = mNativeWrapper.on(milliseconds, vibrationId);
-                }
+                long duration = mNativeWrapper.on(milliseconds, vibrationId);
                 if (duration > 0) {
                     mCurrentAmplitude = -1;
                     notifyListenerOnVibrating(true);
@@ -354,18 +338,8 @@ final class VibratorController {
         Trace.traceBegin(Trace.TRACE_TAG_VIBRATOR, "VibratorController#on (Prebaked)");
         try {
             synchronized (mLock) {
-                long duration = 0;
-                if (mRichTapService != null) {
-                    int[] pattern = RichTapVibrationEffect.getInnerEffect(prebaked.getEffectId());
-                    int strength = RichTapVibrationEffect.getInnerEffectStrength(prebaked.getEffectStrength());
-                    if (pattern != null) {
-                        duration = 30;
-                        mRichTapService.richTapVibratorOnRawPattern(pattern, strength, 0);
-                    }
-                } else {
-                    duration = mNativeWrapper.perform(prebaked.getEffectId(),
-                            prebaked.getEffectStrength(), vibrationId);
-                }
+                long duration = mNativeWrapper.perform(prebaked.getEffectId(),
+                        prebaked.getEffectStrength(), vibrationId);
                 if (duration > 0) {
                     mCurrentAmplitude = -1;
                     notifyListenerOnVibrating(true);
