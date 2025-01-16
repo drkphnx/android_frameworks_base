@@ -112,6 +112,7 @@ public final class PixelPropsUtils {
             "com.activision.callofduty.shooter",
             "com.garena.game.codm",
             "com.tencent.tmgp.kr.codm",
+            "com.tencent.tmgp.cod",
             "com.vng.codmvn"
     };
 
