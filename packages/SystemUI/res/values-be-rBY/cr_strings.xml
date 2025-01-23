@@ -153,5 +153,5 @@
     <string name="accessibility_assistant_button">Памочнік ШІ</string>
     <!-- Screen record -->
     <string name="screenrecord_keep_screen_awake_label">Прадухіляць ад пераходу ў рэжым сну</string>
-    <string name="screenrecord_keep_screen_awake_summary">Keep the screen on</string>
+    <string name="screenrecord_keep_screen_awake_summary">Трымаць экран уключаным</string>
 </resources>
