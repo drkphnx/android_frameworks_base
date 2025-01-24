@@ -81,7 +81,7 @@
     <string name="onthego_front_camera">Použiť prednú kameru</string>
     <string name="onthego_service_toggle">Automaticky reštartovať službu</string>
     <string name="onthego_channel_name">Hlavné</string>
-    <string name="global_action_onthego">Režim na cestách</string>
+    <string name="global_action_onthego">Režim priehľadnej obrazovky</string>
     <!-- Button to restart SystemUI, within the Restart Options dialog -->
     <string name="global_action_restart_systemui">SystemUI</string>
     <!-- Alert slide extras -->
@@ -127,7 +127,7 @@
     <!-- Label for UI element which allows to use lens on screenshot [CHAR LIMIT=30] -->
     <string name="screenshot_lens_label">Lens</string>
     <!-- Smart Pixels QS Tile -->
-    <string name="quick_settings_smart_pixels">Smart Pixels</string>
+    <string name="quick_settings_smart_pixels">Režim inteligentných pixlov</string>
     <string name="quick_settings_smart_pixels_on_power_save">Automaticky zapnúť Smart Pixels</string>
     <!-- Weather Tile -->
     <string name="omnijaws_service_error">Chyba pri načítavaní údajov o počasí</string>
