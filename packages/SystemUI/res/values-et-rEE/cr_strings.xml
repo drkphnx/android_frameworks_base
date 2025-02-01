@@ -33,9 +33,9 @@
     <!-- Name of the roaming status bar icon. -->
     <string name="status_bar_roaming">Rändlusindikaator</string>
     <!-- Name of the HD calling status bar icon. -->
-    <string name="status_bar_hd_calling">HD calling (VoLTE/VoNR)</string>
+    <string name="status_bar_hd_calling">HD helistamine (VoLTE/VoNR)</string>
     <!-- Name of the VoWiFi status bar icon. -->
-    <string name="status_bar_vowifi">Wi-Fi calling (VoWiFi)</string>
+    <string name="status_bar_vowifi">Wi-Fi helistamine (VoWiFi)</string>
     <!-- Status bar network traffic monitor strings -->
     <string name="kilobitspersecond_short">kb/s</string>
     <string name="megabitspersecond_short">Mb/s</string>
@@ -148,8 +148,8 @@
     <!-- Text while recognizing face -->
     <string name="face_unlock_recognizing">Näotuvastus...</string>
     <!-- AI Assistant affordance [CHAR LIMIT=32] -->
-    <string name="accessibility_assistant_button">AI Assistant</string>
+    <string name="accessibility_assistant_button">AI assistent</string>
     <!-- Screen record -->
-    <string name="screenrecord_keep_screen_awake_label">Stay awake</string>
-    <string name="screenrecord_keep_screen_awake_summary">Keep the screen on</string>
+    <string name="screenrecord_keep_screen_awake_label">Jää ärkvele</string>
+    <string name="screenrecord_keep_screen_awake_summary">Hoia ekraan sisse lülitatuna</string>
 </resources>
